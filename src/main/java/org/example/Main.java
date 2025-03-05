@@ -194,12 +194,12 @@ public class Main {
 
     public static boolean checkAllMatchThatNameContainLetterS(String[] nameArray) {
         return Arrays.stream(nameArray)
-                .allMatch(name -> name.toUpperCase().startsWith("S"));
+                .allMatch(name -> name.toUpperCase().contains("S"));
     }
 
     public static boolean checkAnyMatchThatNameContainLetterS(String[] nameArray) {
         return Arrays.stream(nameArray)
-                .anyMatch(name -> name.toUpperCase().startsWith("S"));
+                .anyMatch(name -> name.toUpperCase().contains("S"));
     }
 
     public static boolean checkNoneMatchThatNameContainLetterH(String[] nameArray) {
