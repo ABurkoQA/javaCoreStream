@@ -5,6 +5,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Main {
+    private static final int MIN_NAME_LENGTH = 5;
+
     public static void main(String[] args) {
 
         // 1.1
@@ -15,21 +17,13 @@ public class Main {
 
         // 1.2
 
-        generateRandomStreamValue(5);
+        generateRandomStreamValue(20);
 
         // 1.3
 
         List<Integer> randomValueCollection = generateAndReturnRandomValue(4);
 
         List<Integer> evenValue = collectEvenValue(randomValueCollection);
-
-        // 2
-
-//        List<Integer> list = new ArrayList<Integer>();
-//
-//        for(int i = 1; i < 10; i++){
-//            list.add(i);
-//        }
 
         // 2.4
 
@@ -181,13 +175,14 @@ public class Main {
 
     public static List<String> nameLongerThanFiveSymbols(List<String> nameList) {
         return namesThatStartWithA(nameList).stream()
-                .filter(name -> name.length() > 5) // Magic number
+                .filter(name -> name.length() > MIN_NAME_LENGTH)
                 .toList();
     }
 
     public static void displaySortedNamesInConsole(List<String> nameList) {
                 nameList.stream()
                         .sorted(String::compareTo)
+                        .map(String::toLowerCase)
                         .forEach(System.out::println);
     }
 
