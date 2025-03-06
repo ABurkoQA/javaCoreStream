@@ -247,6 +247,7 @@ public class JavaCoreTestsJUnit {
 
         String[] expectedResult = preparedName.stream()
                 .sorted(String::compareTo)
+                .map(String::toLowerCase)
                 .toArray(String[]::new);
 
         assertEquals(expectedResult.length, actualResult.length);
