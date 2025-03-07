@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 import static org.example.Main.*;
 import static org.junit.Assert.*;
 
-public class JavaCoreTestsJUnit {
+public class JavaCoreJUnitTests {
 
     // 1.1
 
