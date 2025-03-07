@@ -12,7 +12,6 @@ import static org.junit.Assert.*;
 public class JavaCoreJUnitTests {
 
     // 1.1
-
     @Test
     public void testShowInConsole() {
         Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 4, 9);
