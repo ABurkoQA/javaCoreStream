@@ -1,3 +1,4 @@
+import io.qameta.allure.Allure;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -14,6 +15,7 @@ public class JavaCoreJUnitTests {
     // 1.1
     @Test
     public void testShowInConsole() {
+        Allure.step("Just check");
         Stream<Integer> stream = Stream.of(1, 2, 3, 4, 5, 6, 7, 4, 9);
         Stream<Integer> secondStream = Stream.of(1,2,3,4,5,6,7,4,9);
 
